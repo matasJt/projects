@@ -1,0 +1,137 @@
+﻿@page
+@model LAB2SQL.Pages.Employees.EditModel
+@{
+    string page = Request.Query["current_page"];
+    ViewData["Title"] = "Koregavimas";
+}
+<h2>Koreguoti darbuotojo duomenis</h2>
+
+@if (Model.ErrorMessage.Length > 0)
+{
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>@Model.ErrorMessage</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+<form method="POST">
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Vardas</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="name" value="@Model.Employee.name">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Pavardė</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="surname" value="@Model.Employee.surname">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Atlyginimas</label>
+        <div class="col-sm-6">
+            <input type="number" class="form-control" name="salary" value="@Model.Employee.salary">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Įdarbinimo data</label>
+        <div class="col-sm-6">
+            <input type="date" class="form-control" name="start_date" value="@Model.Employee.start_date">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Tel. Nr.</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="phone" value="@Model.Employee.phone">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Email</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="email" value="@Model.Employee.email">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Gimimo diena</label>
+        <div class="col-sm-6">
+
+            <input type="date" class="form-control" name="birthday" value="@Model.Employee.birthday">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-md-6 offset-sm-3">
+            <select class="form-control" id="companyDropdown1" name="company">
+                <option value="">-- Pasirinkti kompanja --</option>
+                @foreach (var companyOption in Model.companies)
+                {
+                    <option value="@companyOption.Text")>
+                        @companyOption.Text
+                    </option>
+                }
+            </select>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-6 offset-sm-3">
+            <select class="form-control" id="professionDropdown" name="profession">
+                <option value="">-- Pasirinkti profesija --</option>
+                @foreach (var professionOption in Model.professions)
+                {
+                    <option value="@professionOption.Text">@professionOption.Text</option>
+                    
+                }
+            </select>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="offset-sm-3 col-sm-3 d-grid">
+            @{
+                string url = $"/Employees?current_page={page}";
+            }
+            <button type="submit" class="btn btn-primary">Atnaujinti</button>
+        </div>
+        <div class="col-sm-3 d-grid">
+            
+            <a class="btn btn-danger" href="@url" role="button">Atgal</a>
+        </div>
+    </div>
+    @if (Model.SuccessMessage.Length > 0)
+    {
+        <div id="success" class="alert alert-success fade show" role="alert">
+            <strong>@Model.SuccessMessage</strong>
+        </div>
+        <script>
+            setTimeout(function () {
+                $('#success').fadeOut(function () {
+                    window.location.href = '/Employees/Index';
+                });
+            }, 1000);
+
+        </script>
+    }
+</form>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var selectedCompanyId = "@Model.Employee.company";
+        var selectedProfession = "@Model.Employee.profession";
+
+        // Set selected option for company dropdown
+        var companyDropdown = document.getElementById('companyDropdown1');
+        for (var i = 0; i < companyDropdown.options.length; i++) {
+            if (companyDropdown.options[i].value === selectedCompanyId) {
+                companyDropdown.options[i].selected = true;
+                break;
+            }
+        }
+
+        // Set selected option for profession dropdown
+        var professionDropdown = document.getElementById('professionDropdown');
+        for (var j = 0; j < professionDropdown.options.length; j++) {
+            if (professionDropdown.options[j].value === selectedProfession) {
+                professionDropdown.options[j].selected = true;
+                break;
+            }
+        }
+    });
+</script>

@@ -1,0 +1,463 @@
+﻿@page
+@model LAB2SQL.Pages.Cargo.IndexModel
+@{
+    ViewData["Title"] = "Kroviniai pagal užsakymus";
+}
+<h3 class="Header">Krovinio informacija</h3>
+@if (TempData["deleted"] != null)
+{
+    <div id="changed" class="alert alert-success" role="alert">
+        <strong>@TempData["deleted"]</strong>
+    </div>
+}
+@if (Model.ErrorMessage.Length > 0)
+{
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>@Model.ErrorMessage</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+<div id="messageContainer"></div>
+<form method="POST">
+    <table class="table table-borderless">
+        <thead>
+            <tr>
+                <th class="col-1">Krovinio ID</th>
+                <th class="col-2">Matmenys</th>
+                <th class="col-3">Tipas</th>
+                <th>Užsakymas</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <input type="text" class="form-control" readonly name="" value="@Model.SelectedOrder">
+                </td>
+                <td>
+                    <input type="text" class="form-control" readonly name="" id="dimen" value="@Model.cargo.dimensions">
+                </td>
+                <td>
+                    <input type="text" class="form-control" readonly name="" value="@Model.cargo.type">
+                </td>
+               
+                <td>
+                    <div class="row mb-3">
+                        <div class="col" style="width:10rem;">
+                            <select class="form-control" id="ordersDropdown" name="SelectedOrder" onchange="submitForm()">
+                                <option value="">-- Pasirinkti užsakymą --</option>
+                                @foreach (var order in Model.orderList)
+                                {
+                                    int idNumber = int.Parse(order.Split(' ')[1]);
+                                    <option value="@idNumber">
+                                        @order
+                                    </option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                </td>
+                <td class="buttons-section">
+                    @{
+                        //string editUrl = $"/Employees/Edit?id={item.id}&current_page={page}";
+                        //tring deleteUrl = $"/Employees/Delete?id={item.id}&current_page={page}";
+                    }
+                   
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-borderless">
+        <thead>
+            <tr>
+                <th class="col-1">Prekės ID</th>
+                <th class="col-2">Kiekis</th>
+                <th class="col-2">Kaina už vnt</th>
+                <th class="col-2">Vnt svoris</th>
+                <th class="col-2">Prekė</th>
+                <th class="col-3">Įmonės pavadinimas</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.goodsList){
+            <tr id="row_@item.id">
+                    <td>
+                        <input type="text" readonly class="form-control" name="id" id="id_@item.id" value="@item.id">
+                    </td>
+                    <td>
+                        <input type="number" class="form-control" name="count" id="count_@item.id" value="@item.count">
+                    </td>
+                    <td>
+                        <input type="number" class="form-control" name="pcount" id="pcount_@item.id" value="@item.pricePerCount">
+                    </td>
+                    <td>
+                        <input type="number" class="form-control" name="weight" id="weight_@item.id" value="@item.weightPerUnit">
+                    </td>
+
+                
+                <td>
+                    <div class="row mb-3">
+                        <div class="col" style="width:12rem;">
+                            <select class="form-control goodsName" id="goodsName1_@item.id" name="goodName">
+                                <option value="">-- Pasirinkti prekę --</option>
+                                @foreach(var name in Model.goodsNames)
+                                {
+                                    <option value="@name">
+                                        @name
+                                    </option>
+                                }
+                            </select>
+                               
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="row mb-3">
+                        <div class="col" style="width:10rem;">
+                            <select class="form-control sellersName" id="sellersName1_@item.id" name="goodSeller">
+                                <option value="">-- Pasirinkti pardavėją --</option>
+                                @foreach (var seller in Model.goodsSellers)
+                                {
+                                    <option value="@seller" >
+                                        @seller
+                                    </option>
+                                }
+                            </select>
+                              
+                        </div>
+                    </div>
+                </td>
+                <td class="buttons-section">
+                    @{
+                        string deleteUrl = $"/Cargo/Delete?id={item.id}";
+                    }
+                    <a class="btn btn-danger btn-md delete-btn" href="@deleteUrl"> <i class="bi bi-trash3-fill"></i> Delete</a>
+                </td>
+            </tr>
+
+                <script>
+                    var selectedItem = '@item.name'; // Assuming 'name' is the property to match for goodsName
+                    var selectedSeller = '@item.seller'; // Assuming 'seller' is the property to match for sellersName
+
+                    var row = document.getElementById('row_@item.id'); // Select row based on unique identifier
+
+                    var goodsDropdown = row.querySelector('.goodsName');
+                    Array.from(goodsDropdown.options).find(function (option) {
+                        if (option.value === selectedItem) {
+                            option.selected = true;
+                            return true;
+                        }
+                    });
+
+                    var sellerDropdown = row.querySelector('.sellersName');
+                    Array.from(sellerDropdown.options).find(function (option) {
+                        if (option.value === selectedSeller) {
+                            option.selected = true;
+                            return true;
+                        }
+                    });
+                </script>
+            }
+        </tbody>
+    </table>
+</form>
+<div>
+    <button type="submit" class="btn btn-primary" id="saveButton">Išsaugoti duomenis</button>
+</div>
+<form method="POST" asp-page-handler="AddToCargo">
+    @if(Model.SelectedOrder != null)
+    {
+        <table class="table table-borderless">
+            <thead>
+                <tr>
+                    <th class="col-1">Krovinio ID</th>
+                    <th class="col-2">Kiekis</th>
+                    <th class="col-2">Kaina už vnt</th>
+                    <th class="col-2">Vnt svoris</th>
+                    <th class="col-2">Prekė</th>
+                    <th class="col-3">Įmonės pavadinimas</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="clone-form">
+                    <td>
+                        <input type="text" readonly class="form-control" id="id" value="@Model.SelectedOrder">
+                    </td>
+                    <td>
+                        <input type="number" class="form-control" id="count" value="@Model.goodsCreate.count">
+                    </td>
+                    <td>
+                        <input type="number" class="form-control" id="pcount" value="@Model.goodsCreate.pricePerCount">
+                    </td>
+                    <td>
+                        <input type="number" class="form-control" id="weight" value="@Model.goodsCreate.weightPerUnit">
+                    </td>
+
+
+                    <td>
+                        <div class="row mb-3">
+                            <div class="col" style="width:12rem;">
+                                <select class="form-control goodsName" id="goodsName" name="goodName">
+                                    <option value="">-- Pasirinkti prekę --</option>
+                                    @foreach (var name in Model.goodsNames)
+                                    {
+                                        <option value="@name">
+                                            @name
+                                        </option>
+                                    }
+                                </select>
+
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="row mb-3">
+                            <div class="col" style="width:10rem;">
+                                <select class="form-control sellersName" id="sellersName" name="goodSeller">
+                                    <option value="">-- Pasirinkti pardavėją --</option>
+                                    @foreach (var seller in Model.goodsSellers)
+                                    {
+                                        <option value="@seller">
+                                            @seller
+                                        </option>
+                                    }
+                                </select>
+
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div style="display: flex; flex-direction: row;">
+            <div style="margin-right: 20px;">
+                <button type="button" class="btn btn-info ms-2" id="addFieldBtn">Pridėti laukelį</button>
+            </div>
+            <div>
+                <button type="button" class="btn btn-primary ms-2" id="addItemsBtn">Pridėti prekes</button>
+            </div>
+        </div>
+
+    }
+</form>
+
+
+<style>
+        .table {
+            width:100%;
+            margin: 0 0 0 0;
+            margin-right:100px;
+        }
+
+        .table th {
+            text-align: left;
+        }
+        
+
+</style>
+<script>
+    function submitForm() {
+        document.querySelector('form').submit();
+    }
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var selectedOrder = "@Model.SelectedOrder";
+
+        // Set selected option for company dropdown
+        var dropDown = document.getElementById('ordersDropdown');
+        for (var i = 0; i < dropDown.options.length; i++) {
+            if (dropDown.options[i].value === selectedOrder) {
+                dropDown.options[i].selected = true;
+                break;
+            }
+        }
+        });
+</script>
+<script>
+    setTimeout(function () {
+        $('#changed').fadeOut(function () {
+            window.location.href = '/Cargo/Index';
+        });
+    }, 2000);
+
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Attach click event listener to the save button
+        document.getElementById('saveButton').addEventListener('click', async function () {
+            var dataArray = []; // Array to store data from each row
+
+
+            // Loop through each row of inputs
+    @foreach (var item in Model.goodsList)
+    {
+        <text>
+                var rowId = '@item.id';
+
+                // Collect data from the current row
+                var id = parseInt(document.getElementById('id_' + rowId).value);
+                var count = parseInt(document.getElementById('count_' + rowId).value);
+                var pricePerCount = parseInt(document.getElementById('pcount_' + rowId).value);
+                var weightPerUnit = parseInt(document.getElementById('weight_' + rowId).value);
+                var name = document.getElementById('goodsName1_' + rowId).value;
+                var seller = document.getElementById('sellersName1_'+rowId).value;
+
+                var rowData = {
+                    id: id,
+                    count: count,
+                    pricePerCount: pricePerCount,
+                    weightPerUnit: weightPerUnit,
+                    seller: seller,
+                    name: name
+                };
+                dataArray.push(rowData);
+        </text>
+    }
+
+            // Serialize the dataArray to JSON
+            var jsonData = JSON.stringify(dataArray);
+
+            // Send POST request using jQuery's $.ajax()
+            $.ajax({
+                type: "POST",
+                url: "/Cargo/Index?handler=UpdateData",
+                data: jsonData,
+                contentType: 'application/json',
+                success: function (data) {
+                    // Display success message
+                    var messageContainer = $('#messageContainer');
+                    messageContainer.addClass('success').text("Prekių duomenys buvo išsaugoti").show();
+                    setTimeout(function () {
+                        messageContainer.slideUp(); // Fade out the message container after 3 seconds
+                    }, 3000); // 3000 milliseconds = 3 seconds
+                    console.log("Success:", data);
+                },
+                error: function (xhr, status, error) {
+                    // Display error message
+                    var messageContainer = $('#messageContainer');
+                    messageContainer.addClass('error').text("Error: " + error).show();
+                    setTimeout(function () {
+                        messageContainer.slideUp(); // Fade out the message container after 3 seconds
+                    }, 3000); // 3000 milliseconds = 3 seconds
+                    console.error("Error:", error);
+                }
+            });
+        });
+    });
+</script>
+<style>
+    #messageContainer {
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        color: #333;
+        padding: 10px 20px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        display: none;
+    }
+
+        #messageContainer.success {
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+            color: #155724;
+        }
+
+        #messageContainer.error {
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+            color: #721c24;
+        }
+</style>
+<script>
+    // JavaScript to handle adding more form rows dynamically
+    document.getElementById("addFieldBtn").addEventListener("click", function () {
+        // Clone the existing row
+        var existingRow = document.querySelector(".clone-form");
+        var newRow = existingRow.cloneNode(true);
+
+        // Clear input values in the new row
+        var inputs = newRow.querySelectorAll("input[type='text'], input[type='number']");
+        inputs.forEach(function (input) {
+            if(input.id !== "id")
+             input.value = "";
+        });
+
+        // Insert the new row after the existing row
+        existingRow.insertAdjacentElement('afterend', newRow);
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById("addItemsBtn").addEventListener("click", function () {
+            var rows = document.querySelectorAll(".clone-form");
+            var data = [];
+            var allRowsFilled = true;
+            var order = document.getElementById('ordersDropdown').value;
+
+            rows.forEach(function (row) {
+                var count = parseInt(row.querySelector("#count").value);
+                var pricePerCount = parseInt(row.querySelector("#pcount").value);
+                var weightPerUnit = parseInt(row.querySelector("#weight").value);
+                var name = row.querySelector("#goodsName").value;
+                var seller = row.querySelector("#sellersName").value;
+
+                if (isNaN(count) || isNaN(pricePerCount) || isNaN(weightPerUnit) || name.trim() === '' || seller.trim() === '') {
+                    allRowsFilled = false;
+                    return;
+                }
+                var rowData = {
+                    id: order,
+                    count: count,
+                    pricePerCount: pricePerCount,
+                    weightPerUnit: weightPerUnit,
+                    seller: seller,
+                    name: name
+                    // Collect other fields similarly
+                };
+                data.push(rowData);
+            });
+
+            if (!allRowsFilled) {
+                var messageContainer = $('#messageContainer');
+                messageContainer.addClass('error').text("Visi laukai turi būti užpildyti.").show();
+                setTimeout(function () {
+                    messageContainer.slideUp();
+                }, 3000);
+                return;
+            }
+
+            var jsonData = JSON.stringify(data);
+            var jsonData1 = JSON.stringify(order);
+
+            // Send POST request using jQuery's $.ajax()
+            $.ajax({
+                type: "POST",
+                url: "/Cargo/Index?handler=AddToCargo",
+                data: jsonData, jsonData1,
+                contentType: 'application/json',
+                success: function (data) {
+                    // Display success message
+                    var messageContainer = $('#messageContainer');
+                    messageContainer.removeClass('error');
+                    messageContainer.addClass('success').text("Prekės buvo pridėtos prie krovinio").show();
+                    setTimeout(function () {
+                        messageContainer.slideUp();
+                        window.location.href = '@Url.Page("/Cargo/Index")';
+                    }, 1500); 
+                    console.log("Success:", data);
+                },
+                error: function (xhr, status, error) {
+                    // Display error message
+                    var messageContainer = $('#messageContainer');
+                    messageContainer.addClass('error').text("Error: " + error).show();
+                    setTimeout(function () {
+                        messageContainer.slideUp(); 
+                    }, 3000); 
+                    console.error("Error:", error);
+                }
+            });
+        });
+    });
+</script>

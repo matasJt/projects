@@ -1,0 +1,69 @@
+﻿@page
+@model LAB2SQL.Pages.Clients.IndexModel
+@{
+    ViewData["Title"] = "Klientai";
+    string page = Request.Query["current_page"];
+}
+<h3 class="Header">Klientai</h3>
+@if(TempData["success"] != null)
+{
+    <div id="success" class="alert alert-success" role="alert">
+        <strong>@TempData["success"]</strong>
+    </div>
+}
+<a class="btn btn-primary btn-sm" href="/Clients/Create"><i class="bi bi-plus-lg"></i> Naujas</a>
+<table class="table table-borderless">
+<thead>
+    <tr>
+        <th>ID</th>
+        <th>Vardas</th>
+        <th>Pavardė</th>
+        <th>Tel.Nr</th>
+        <th>Email</th>
+        <th>Pristatymo ID</th>
+    </tr>
+</thead>
+<tbody>
+        @foreach(var item in Model.clientsList)
+        {
+            <tr class="@((item.id % 2 == 0) ? "even" : "odd")">
+                <td>@item.id</td>
+                <td>@item.name</td>
+                <td>@item.surname</td>
+                <td>@item.phone</td>
+                <td>@item.email</td>
+                <td>@item.fkDestination</td>
+                <td class="buttons-section">
+                    @{
+                        string editUrl = $"/Clients/Edit?id={item.id}&current_page={page}";
+                        string deleteUrl = $"/Clients/Delete?id={item.id}&current_page={page}";
+                    }
+                    <a class="btn btn-primary btn-sm" href="@editUrl"><i class="bi bi-pencil-square"></i> Edit</a>
+                    <a class="btn btn-danger btn-sm" href="@deleteUrl"> <i class="bi bi-trash3-fill"></i> Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@Html.Partial("Pagination", new PaginationModel { TotalPages = Model.TotalPages, CurrentPage = Model.CurrentPage })
+<style>
+    .even{
+        background-color:aliceblue;
+    }
+    .odd{
+        background-color: lightcyan;
+    }
+    .buttons-section{
+        width:155px;
+    }
+    .container{
+        max-width:1500px;
+    }
+</style>
+<script>
+    setTimeout(function () {
+        $('#success').fadeTo(500, 0).slideUp(500, function () {
+            $(this).remove();
+        });
+    }, 1000);
+</script>

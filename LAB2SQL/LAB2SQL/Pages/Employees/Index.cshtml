@@ -1,0 +1,90 @@
+﻿@page
+@model LAB2SQL.Pages.Employees.IndexModel
+@{
+    ViewData["Title"] = "Darbuotojai";
+    string page = Request.Query["current_page"];
+    int count = 0;
+}
+
+<h3 class="Header">Darbuotojai</h3>
+@if (TempData["deleted"] != null)
+{
+    <div id="deleted" class="alert alert-success" role="alert">
+        <strong>@TempData["deleted"]</strong>
+    </div>
+}
+<a class="btn btn-primary btn-sm mw-100" href="/Employees/Create"><i class="bi bi-plus-lg"></i> Naujas</a>
+<table class="table table-borderless">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th >Vardas</th>
+            <th>Pavardė</th>
+            <th>Atlyginimas</th>
+            <th>Įsidarbinimo vieta</th>
+            <th>Tel.Nr</th>
+            <th>Email</th>
+            <th class="col-auto">Gimimo data</th>
+            <th>Kompanija</th>
+            <th>Profesija</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.emplList)
+        {
+            <tr class="@((count++ % 2 == 0) ? "alternate" : "even")">
+                <td>@item.id</td>
+                <td>@item.name</td>
+                <td>@item.surname</td>
+                <td>@item.salary</td>
+                <td>@item.start_date</td>
+                <td>@item.phone</td>
+                <td>@item.email</td>
+                <td>@item.birthday</td>
+                <td>@item.company</td>
+                <td>@item.profession</td>
+                <td class="buttons-section">
+                    @{
+                        string editUrl = $"/Employees/Edit?id={item.id}&current_page={page}";
+                        string deleteUrl = $"/Employees/Delete?id={item.id}&current_page={page}";
+                    }
+                    <a class="btn btn-primary btn-sm" href="@editUrl"><i class="bi bi-pencil-square"></i> Edit</a>
+                    <a class="btn btn-danger btn-sm delete-btn" href="@deleteUrl"> <i class="bi bi-trash3-fill"></i> Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@Html.Partial("Pagination", new PaginationModel { TotalPages = Model.TotalPages, CurrentPage = Model.CurrentPage })
+<style>
+    .even {
+        background-color: aliceblue;
+    }
+
+    .alternate {
+        background-color: lightcyan;
+    }
+
+    .buttons-section {
+        width: 155px;
+    }
+
+    tr{
+        transition: opacity 0.3s ease;
+    }
+
+    .table {
+        width: 110%;
+        margin: 0 0 0 0;
+      
+    }
+
+</style>
+<script>
+    setTimeout(function () {
+        $('#deleted').fadeTo(800, 0).slideUp(700, function () {
+            $(this).remove();
+        });
+    }, 1000);
+   
+</script>

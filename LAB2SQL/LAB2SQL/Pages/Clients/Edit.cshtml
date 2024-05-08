@@ -1,0 +1,72 @@
+﻿@page
+@model LAB2SQL.Pages.Clients.EditModel
+@{
+    string page = Request.Query["current_page"];
+}
+<h2>Kliento atnaujinimas</h2>
+
+@if (Model.ErrorMessage.Length > 0)
+{
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>@Model.ErrorMessage</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+<form method="POST">
+    <input type="hidden" name="id" value="@Model.Client.id" />
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Vardas</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="name" value="@Model.Client.name">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Pavardė</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="surname" value="@Model.Client.surname">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Tel. Nr.</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="phone" value="@Model.Client.phone">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Email</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="email" value="@Model.Client.email">
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="offset-sm-3 col-sm-3 d-grid">
+            <button type="submit" class="btn btn-primary">Atnaujinti</button>
+        </div>
+        <div class="col-sm-3 d-grid">
+            @{
+                string url = $"/Clients?current_page={page}";
+            }
+            <a class="btn btn-danger" href="@url" role="button">Atgal</a>
+        </div>
+    </div>
+    @if (Model.SuccessMessage.Length > 0)
+    {
+        <div id="success" class="alert alert-success fade show" role="alert">
+            <strong>@Model.SuccessMessage</strong>
+        </div>
+        <script>
+            setTimeout(function () {
+                $('#success').fadeOut(function () {
+                    window.location.href = '/Clients/Index';
+                });
+            }, 1000);
+
+        </script>
+    }
+</form>
+<style>
+    .col-form-label {
+        font-weight: bold;
+    }
+</style>
