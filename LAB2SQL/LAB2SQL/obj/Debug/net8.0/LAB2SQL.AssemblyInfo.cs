@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LAB2SQL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1991cd624924253a664e14763d3e7d8984bf71fb")]
 [assembly: System.Reflection.AssemblyProductAttribute("LAB2SQL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LAB2SQL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

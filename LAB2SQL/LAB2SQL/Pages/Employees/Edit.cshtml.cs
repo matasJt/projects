@@ -69,16 +69,16 @@ namespace LAB2SQL.Pages.Employees
 
                             if (reader.Read())
                             {
-                                Employee.id = reader.GetInt32(0);
-                                Employee.name = reader.GetString(1);
-                                Employee.surname = reader.GetString(2);
-                                Employee.salary = reader.GetDecimal(3);
-                                Employee.start_date = reader.GetDateTime(4).ToString("yyyy-MM-dd");
-                                Employee.phone = reader.GetString(5);
-                                Employee.email = reader.GetString(6);
-                                Employee.birthday = reader.GetDateTime(7).ToString("yyyy-MM-dd");
-                                Employee.company = reader.GetString(10);
-                                Employee.profession = reader.GetString(11);
+                                Employee.Id = reader.GetInt32(0);
+                                Employee.Name = reader.GetString(1);
+                                Employee.Surname = reader.GetString(2);
+                                Employee.Salary = reader.GetDecimal(3);
+                                Employee.Start_date = reader.GetDateTime(4).ToString("yyyy-MM-dd");
+                                Employee.Phone = reader.GetString(5);
+                                Employee.Email = reader.GetString(6);
+                                Employee.Birthday = reader.GetDateTime(7).ToString("yyyy-MM-dd");
+                                Employee.Company = reader.GetString(10);
+                                Employee.Profession = reader.GetString(11);
                             }
                         }
 
@@ -95,21 +95,21 @@ namespace LAB2SQL.Pages.Employees
         public void OnPost()
         {
             string id = Request.Query["id"];
-            Employee.id = int.Parse(id);
-            Employee.name = Request.Form["name"];
-            Employee.surname = Request.Form["surname"];
-            Employee.salary = Convert.ToDecimal(Request.Form["salary"]);
-            Employee.start_date = Request.Form["start_date"];
-            Employee.phone = Request.Form["phone"];
-            Employee.email = Request.Form["email"];
-            Employee.birthday = Request.Form["birthday"];
+            Employee.Id = int.Parse(id);
+            Employee.Name = Request.Form["name"];
+            Employee.Surname = Request.Form["surname"];
+            Employee.Salary = Convert.ToDecimal(Request.Form["salary"]);
+            Employee.Start_date = Request.Form["start_date"];
+            Employee.Phone = Request.Form["phone"];
+            Employee.Email = Request.Form["email"];
+            Employee.Birthday = Request.Form["birthday"];
             string company = Request.Form["company"];
             string profession = Request.Form["profession"];
 
 
-            if (Employee.name.Length == 0 || Employee.surname.Length == 0 ||
-                Employee.phone.Length == 0 || Employee.email.Length == 0
-                || Employee.salary == 0 || Employee.start_date.Length == 0)
+            if (Employee.Name.Length == 0 || Employee.Surname.Length == 0 ||
+                Employee.Phone.Length == 0 || Employee.Email.Length == 0
+                || Employee.Salary == 0 || Employee.Start_date.Length == 0)
             {
                 ErrorMessage = "Visi laukai privalo būti užpildyti";
                 OnGet();
@@ -151,13 +151,13 @@ namespace LAB2SQL.Pages.Employees
                     using (MySqlCommand cmd = new MySqlCommand(sql, connect))
                     {
                         cmd.Parameters.AddWithValue("@id", id);
-                        cmd.Parameters.AddWithValue("@name", Employee.name);
-                        cmd.Parameters.AddWithValue("@surname", Employee.surname);
-                        cmd.Parameters.AddWithValue("@salary", Employee.salary);
-                        cmd.Parameters.AddWithValue("@start_date", Employee.start_date);
-                        cmd.Parameters.AddWithValue("@phone", Employee.phone);
-                        cmd.Parameters.AddWithValue("@email", Employee.email);
-                        cmd.Parameters.AddWithValue("@birthday", Employee.birthday);
+                        cmd.Parameters.AddWithValue("@name", Employee.Name);
+                        cmd.Parameters.AddWithValue("@surname", Employee.Surname);
+                        cmd.Parameters.AddWithValue("@salary", Employee.Salary);
+                        cmd.Parameters.AddWithValue("@start_date", Employee.Start_date);
+                        cmd.Parameters.AddWithValue("@phone", Employee.Phone);
+                        cmd.Parameters.AddWithValue("@email", Employee.Email);
+                        cmd.Parameters.AddWithValue("@birthday", Employee.Birthday);
                         cmd.Parameters.AddWithValue("@companyId", companyID);
                         cmd.Parameters.AddWithValue("@professionId", professionID);
                         cmd.ExecuteNonQuery();

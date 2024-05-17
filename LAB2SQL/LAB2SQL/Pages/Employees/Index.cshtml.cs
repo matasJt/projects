@@ -43,16 +43,16 @@ namespace LAB2SQL.Pages.Employees
                             while (reader.Read())
                             {
                                 Employee employee = new Employee();
-                                employee.id = reader.GetInt32(0);
-                                employee.name = reader.GetString(1);
-                                employee.surname = reader.GetString(2);
-                                employee.salary = reader.GetDecimal(3);
-                                employee.start_date = reader.GetDateTime(4).ToString("yyyy-MM-dd");
-                                employee.phone = reader.GetString(5);
-                                employee.email = reader.GetString(6);
-                                employee.birthday = reader.GetDateTime(7).ToString("yyyy-MM-dd");
-                                employee.company = reader.GetString(10);
-                                employee.profession = reader.GetString(11);
+                                employee.Id = reader.GetInt32(0);
+                                employee.Name = reader.GetString(1);
+                                employee.Surname = reader.GetString(2);
+                                employee.Salary = reader.GetDecimal(3);
+                                employee.Start_date = reader.GetDateTime(4).ToString("yyyy-MM-dd");
+                                employee.Phone = reader.GetString(5);
+                                employee.Email = reader.GetString(6);
+                                employee.Birthday = reader.GetDateTime(7).ToString("yyyy-MM-dd");
+                                employee.Company = reader.GetString(10);
+                                employee.Profession = reader.GetString(11);
                                 emplList.Add(employee);
                             }
 
@@ -72,15 +72,18 @@ namespace LAB2SQL.Pages.Employees
 }
 public class Employee
 {
-    public int id;
-    public string? name;
-    public string? surname;
-    public decimal salary;
-    public string? start_date;
-    public string? phone;
-    public string? email;
-    public string? birthday;
-    public string? company;
-    public string? profession;
+    public int Id {  get; set; }
+    public string? Name { get; set; }
+    public string? Surname { get; set; }
+    public decimal Salary { get; set; }
+    public string? Start_date { get; set; }
+    public string? Phone { get; set; }
+    public string? Email { get; set; }
+    public string? Birthday { get; set; }
+    public string? Company { get; set; }
+    public string? Profession { get; set; }
+    public int OrdersCount { get; set; }
+    public int AverageSalaryByProfession { get; set; }
+    public int MaxSalaryByProfession { get; set; }
 
 }

@@ -33,20 +33,20 @@
         @foreach (var item in Model.emplList)
         {
             <tr class="@((count++ % 2 == 0) ? "alternate" : "even")">
-                <td>@item.id</td>
-                <td>@item.name</td>
-                <td>@item.surname</td>
-                <td>@item.salary</td>
-                <td>@item.start_date</td>
-                <td>@item.phone</td>
-                <td>@item.email</td>
-                <td>@item.birthday</td>
-                <td>@item.company</td>
-                <td>@item.profession</td>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Surname</td>
+                <td>@item.Salary</td>
+                <td>@item.Start_date</td>
+                <td>@item.Phone</td>
+                <td>@item.Email</td>
+                <td>@item.Birthday</td>
+                <td>@item.Company</td>
+                <td>@item.Profession</td>
                 <td class="buttons-section">
                     @{
-                        string editUrl = $"/Employees/Edit?id={item.id}&current_page={page}";
-                        string deleteUrl = $"/Employees/Delete?id={item.id}&current_page={page}";
+                        string editUrl = $"/Employees/Edit?id={item.Id}&current_page={page}";
+                        string deleteUrl = $"/Employees/Delete?id={item.Id}&current_page={page}";
                     }
                     <a class="btn btn-primary btn-sm" href="@editUrl"><i class="bi bi-pencil-square"></i> Edit</a>
                     <a class="btn btn-danger btn-sm delete-btn" href="@deleteUrl"> <i class="bi bi-trash3-fill"></i> Delete</a>

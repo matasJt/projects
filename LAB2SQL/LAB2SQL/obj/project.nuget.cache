@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ECGA0TxNbaJ8lQNlDZ7P8H4hOp1N6dDLKm299n2L1VlU51cyb3e7XZOqmqLt6zzFIeXdMuZiYLVbWQ69Ve6GMA==",
+  "dgSpecHash": "n/2TwtHXPqVzd5lMZVwOkv2Fz6lDBpveE0/GVtXOwlw+OivGslv01IsPmVHHwIsAcjsfModH2Z/EpZ08jwJDoQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\Desktop\\KTU\\2 Kursas\\4 pusmetis\\Data bases\\LAB2SQL\\LAB2SQL\\LAB2SQL.csproj",
+  "projectFilePath": "C:\\Users\\Admin\\Desktop\\KTU\\2 Kursas\\4 pusmetis\\LAB2DATABASE\\projects\\LAB2SQL\\LAB2SQL\\LAB2SQL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\google.protobuf\\3.25.1\\google.protobuf.3.25.1.nupkg.sha512",

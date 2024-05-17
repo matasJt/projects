@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\Desktop\\KTU\\2 Kursas\\4 pusmetis\\Data bases\\LAB2SQL\\LAB2SQL\\LAB2SQL.csproj": {}
+    "C:\\Users\\Admin\\Desktop\\KTU\\2 Kursas\\4 pusmetis\\LAB2DATABASE\\projects\\LAB2SQL\\LAB2SQL\\LAB2SQL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Desktop\\KTU\\2 Kursas\\4 pusmetis\\Data bases\\LAB2SQL\\LAB2SQL\\LAB2SQL.csproj": {
+    "C:\\Users\\Admin\\Desktop\\KTU\\2 Kursas\\4 pusmetis\\LAB2DATABASE\\projects\\LAB2SQL\\LAB2SQL\\LAB2SQL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\KTU\\2 Kursas\\4 pusmetis\\Data bases\\LAB2SQL\\LAB2SQL\\LAB2SQL.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\KTU\\2 Kursas\\4 pusmetis\\LAB2DATABASE\\projects\\LAB2SQL\\LAB2SQL\\LAB2SQL.csproj",
         "projectName": "LAB2SQL",
-        "projectPath": "C:\\Users\\Admin\\Desktop\\KTU\\2 Kursas\\4 pusmetis\\Data bases\\LAB2SQL\\LAB2SQL\\LAB2SQL.csproj",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\KTU\\2 Kursas\\4 pusmetis\\LAB2DATABASE\\projects\\LAB2SQL\\LAB2SQL\\LAB2SQL.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Desktop\\KTU\\2 Kursas\\4 pusmetis\\Data bases\\LAB2SQL\\LAB2SQL\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\KTU\\2 Kursas\\4 pusmetis\\LAB2DATABASE\\projects\\LAB2SQL\\LAB2SQL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -422,6 +422,7 @@
             if (!allRowsFilled) {
                 var messageContainer = $('#messageContainer');
                 messageContainer.addClass('error').text("Visi laukai turi būti užpildyti.").show();
+                window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
                 setTimeout(function () {
                     messageContainer.slideUp();
                 }, 3000);
