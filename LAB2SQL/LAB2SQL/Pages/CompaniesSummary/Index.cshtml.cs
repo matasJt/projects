@@ -1,4 +1,5 @@
 using LAB2SQL.Pages.Employees;
+using Microsoft.AspNetCore.Hosting.Server;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using MySql.Data.MySqlClient;
@@ -20,11 +21,20 @@ namespace LAB2SQL.Pages.CompaniesSummary
         public string Name { get; set; }
         public int Revenue { get; set; }
         public int MaxSalary { get; set; }
+        public int FilteredEmployeesAmount { get; set; }
+        public int TotalOrders { get; set; } = 0;
+        public int TotalOrdersFiltered { get; set; } = 0;
+
         public List<Employee> Employees = new List<Employee>();
     }
     [IgnoreAntiforgeryToken]
     public class IndexModel(IConfiguration config) : PageModel
     {
+        [BindProperty]
+        public int CompaniesAmount { get; set; }
+        [BindProperty]
+        public int EmployeesAmount { get; set; }
+
         public List<Company> queryCompanies = new List<Company>();
         public List<string> companies = new List<string>();
         public List<string> professions = new List<string>();
@@ -73,6 +83,8 @@ namespace LAB2SQL.Pages.CompaniesSummary
             ViewData["Profession"] = profession;
             ViewData["dateTo"] = dateTo;
             ViewData["dateFrom"] = dateFrom;
+            CompaniesAmount = 0;
+            EmployeesAmount= 0;
             try
             {
                 using (MySqlConnection connection = new MySqlConnection(connectionString))
@@ -90,7 +102,8 @@ namespace LAB2SQL.Pages.CompaniesSummary
                         "FROM klientai k " +
                         "JOIN mokėjimai m ON k.id = m.fk_KLIENTAS " +
                         "JOIN užsakymai u ON m.id = u.`fk_MOKĖJIMAS` " +
-                        "WHERE u.fk_KOMPANIJA = t.id) AS pajamos_is_uzsakymu " +
+                        "WHERE u.fk_KOMPANIJA = t.id) AS pajamos_is_uzsakymu, " +
+                        "COUNT(d.id) OVER(PARTITION BY t.pavadinimas) AS filtred_employees " +
                         "FROM darbuotojai d " +
                         "left JOIN užsakymai u ON u.fk_VAIRUOTOJAS = d.id " +
                         "join transportavimo_kompanijos t ON d.fk_KOMPANIJA = t.id " +
@@ -136,22 +149,25 @@ namespace LAB2SQL.Pages.CompaniesSummary
                                 int maxSalary = reader.GetInt32(7);
                                 int revenue = reader.GetInt32(9);
 
-
                                 Company company = queryCompanies.Find(x => x.Name == companyName);
                                 if (company == null)
                                 {
                                     Company newCompany = new Company();
+                                    newCompany.FilteredEmployeesAmount = reader.GetInt32(10);
+                                    newCompany.TotalOrdersFiltered = employee.OrdersCount;
                                     newCompany.Name = companyName;
                                     newCompany.MaxSalary = maxSalary;
                                     newCompany.Revenue = revenue;
                                     queryCompanies.Add(newCompany);
                                     newCompany.Employees.Add(employee);
+                                    CompaniesAmount++;
                                 }
                                 else
                                 {
+                                    company.TotalOrdersFiltered += employee.OrdersCount;
                                     company.Employees.Add(employee);
                                 }
-
+                                EmployeesAmount++;
                             }
                         }
                     }

@@ -53,6 +53,20 @@
     </div>
     @if (Model.queryCompanies.Count > 0)
     {
+        <div class="container">
+            <div class="row justify-content-center mb-2 mt-2">
+                <div class="col-md-8 text-center">
+                    <div class="alert alert-custom" role="alert">
+                        <strong>Išfiltruota informacija:</strong>
+                        <ul class="list-unstyled mt-2">
+                            <li>Išfiltruota kompanijų: <span class="badge bg-primary">@Model.CompaniesAmount</span></li>
+                            <li>Išfiltruota darbuotojų: <span class="badge bg-success">@Model.EmployeesAmount</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         @foreach (var company in Model.queryCompanies)
         {
             <table class="table table-borderless mt-2 rounded-table" id="companyTable">
@@ -106,9 +120,26 @@
                     </tbody>
 
                 </table>
+            <div class="container">
+                <div class="row justify-content-center mt-2">
+                    <div class="col-md-8 text-center">
+                        <div class="alert alert-custom" role="alert">
+                            <strong>Bendra informacija:</strong>
+                            <ul class="list-unstyled mt-2">
+                                <li>Išfiltruota darbuotojų: <span class="badge bg-primary">@company.FilteredEmployeesAmount</span></li>
+                                <li>Užsakymų kiekis: <span class="badge bg-success">@company.TotalOrdersFiltered</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <hr class="style-four">
         }
 
+    }
+    else
+    {
+        <div>Nėra duomenų pagal filtrą</div>
     }
 
 </form>
@@ -223,11 +254,7 @@
             else{
                 document.getElementById('dateFrom').classList.remove('invalid-input');
                 document.getElementById('dateTo').classList.remove('invalid-input');
-                
-                if (@Model.queryCompanies.Count == 0) { messageContainer.addClass('error').text("Nėra duomenų").show(); }
-                else { messageContainer.removeClass('error'); messageContainer.addClass('success').text("Prekės išfiltruotos").show(); }
-              
-   
+                messageContainer.removeClass('error'); messageContainer.addClass('success').text("Prekės išfiltruotos").show();
                 window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
                 setTimeout(function () {
                     messageContainer.slideUp(function () {
@@ -235,6 +262,7 @@
                     });
                 }, 700);
             }
+            
            
 
         });
