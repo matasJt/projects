@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\KTU\\2 Kursas\\4 pusmetis\\LAB2DATABASE\\projects\\LAB2SQL\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7473BF13-0676-4912-92D9-1A5525F5FD16}|LAB2SQL\\LAB2SQL.csproj|c:\\users\\admin\\desktop\\ktu\\2 kursas\\4 pusmetis\\lab2database\\projects\\lab2sql\\lab2sql\\pages\\companiessummary\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7473BF13-0676-4912-92D9-1A5525F5FD16}|LAB2SQL\\LAB2SQL.csproj|solutionrelative:lab2sql\\pages\\companiessummary\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7473BF13-0676-4912-92D9-1A5525F5FD16}|LAB2SQL\\LAB2SQL.csproj|c:\\users\\admin\\desktop\\ktu\\2 kursas\\4 pusmetis\\lab2database\\projects\\lab2sql\\lab2sql\\pages\\companiessummary\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7473BF13-0676-4912-92D9-1A5525F5FD16}|LAB2SQL\\LAB2SQL.csproj|solutionrelative:lab2sql\\pages\\companiessummary\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7473BF13-0676-4912-92D9-1A5525F5FD16}|LAB2SQL\\LAB2SQL.csproj|c:\\users\\admin\\desktop\\ktu\\2 kursas\\4 pusmetis\\lab2database\\projects\\lab2sql\\lab2sql\\pages\\companiessummary\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7473BF13-0676-4912-92D9-1A5525F5FD16}|LAB2SQL\\LAB2SQL.csproj|solutionrelative:lab2sql\\pages\\companiessummary\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7473BF13-0676-4912-92D9-1A5525F5FD16}|LAB2SQL\\LAB2SQL.csproj|c:\\users\\admin\\desktop\\ktu\\2 kursas\\4 pusmetis\\lab2database\\projects\\lab2sql\\lab2sql\\pages\\cargo\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -66,7 +66,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 216,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -94,8 +94,7 @@
               "RelativeToolTip": "LAB2SQL\\Pages\\Cargo\\Index.cshtml.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABUBAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T08:26:19.355Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-16T08:26:19.355Z"
             },
             {
               "$type": "Document",
@@ -171,26 +170,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Index.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\KTU\\2 Kursas\\4 pusmetis\\LAB2DATABASE\\projects\\LAB2SQL\\LAB2SQL\\Pages\\CompaniesSummary\\Index.cshtml.cs",
               "RelativeDocumentMoniker": "LAB2SQL\\Pages\\CompaniesSummary\\Index.cshtml.cs",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\KTU\\2 Kursas\\4 pusmetis\\LAB2DATABASE\\projects\\LAB2SQL\\LAB2SQL\\Pages\\CompaniesSummary\\Index.cshtml.cs",
               "RelativeToolTip": "LAB2SQL\\Pages\\CompaniesSummary\\Index.cshtml.cs",
-              "ViewState": "AQIAAIkAAAAAAAAAAAAAAI4AAABKAAAA",
+              "ViewState": "AQIAAG4AAAAAAAAAAAAAAH4AAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-16T07:03:37.409Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\KTU\\2 Kursas\\4 pusmetis\\LAB2DATABASE\\projects\\LAB2SQL\\LAB2SQL\\Pages\\CompaniesSummary\\Index.cshtml",
               "RelativeDocumentMoniker": "LAB2SQL\\Pages\\CompaniesSummary\\Index.cshtml",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\KTU\\2 Kursas\\4 pusmetis\\LAB2DATABASE\\projects\\LAB2SQL\\LAB2SQL\\Pages\\CompaniesSummary\\Index.cshtml",
               "RelativeToolTip": "LAB2SQL\\Pages\\CompaniesSummary\\Index.cshtml",
-              "ViewState": "AQIAAHMAAAAAAAAAAAAQwIkAAAAAAAAA",
+              "ViewState": "AQIAAEMAAAAAAAAAAAAQwIkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-05-16T07:00:59.662Z",
               "EditorCaption": ""

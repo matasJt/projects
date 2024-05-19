@@ -124,6 +124,7 @@ namespace LAB2SQL.Pages.CompaniesSummary
                     {
                         filterQuery += " HAVING " + string.Join(" AND ", valuesForFilter);
                     }
+                    filterQuery += " order by d.pavardė ";
 
                     using (MySqlCommand command = new MySqlCommand(filterQuery, connection))
                     {
