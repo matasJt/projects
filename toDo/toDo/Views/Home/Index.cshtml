@@ -1,0 +1,72 @@
+﻿@model TodoTaskViewModel
+
+@{
+    ViewData["Title"] = "TODO";
+}
+<br />
+<form method="post" asp-controller="Home" asp-action="Add">
+    <div class="input-group mb-3">
+        <input type="text"
+               id="name"
+               class="form-control"
+               placeholder="Write a task"
+               asp-for="NewTask.Name" />
+        <button class="input-group-text btn btn-primary">Add task</button>
+    </div>
+</form>
+@if (Model.Tasks.Any())
+{
+    <text>
+        <div class="position-relative mb-5">
+            <span class="position-absolute top-0 start-0 badge rounded-pill bg-danger">@Model.Tasks.Where(x => x.IsDone == false).Count() tasks to be done</span>
+        </div>
+    </text>
+    <form method="post" asp-controller='Home' asp-action="CheckAsDone">
+        <ul class="list-group" id="scrollable">
+            @for (var i = 0; i < Model.Tasks.Count; i++)
+            {
+                <li class="list-group-item list-group-item-action @(Model.Tasks[i].IsDone ? "d-none" : "") d-flex justify-content-between">
+                    <input type="checkbox" class="form-check-input me-2" asp-for="Tasks[i].IsDone" checked="@Model.Tasks[i].IsDone" onchange="this.form.submit();" asp-route="Tasks[i].Id">
+                    <input type="hidden" asp-for="Tasks[i].Id" />
+                    <input type="hidden" asp-for="Tasks[i].Name" />
+                    <input type="hidden" asp-for="Tasks[i].dateTime" />
+
+                   
+                        <label class="flex-grow-1">
+                            @Model.Tasks[i].Name
+                        </label>
+                        <span class="timestamp">
+                          <b>@Model.Tasks[i].dateTime.ToLongTimeString() </b> <i>@Model.Tasks[i].dateTime.ToLongDateString()</i>
+                        </span>
+                    
+                    
+                </li>
+            }
+        </ul>
+    </form>
+}
+else
+{
+    <p>No tasks available.</p>
+}
+@if (Model.Tasks.Any())
+{
+    <div class="position-relative mt-3 mb-5">
+        <span class="position-absolute top-0 start-0 badge rounded-pill bg-primary">@Model.Tasks.Where(x => x.IsDone == true).Count() tasks is done</span>
+    </div>
+}
+<ul class="list-group mt-4" id="scrollable">
+    @for (var i = 0; i < Model.Tasks.Count; i++)
+    {
+        @if (Model.Tasks[i].IsDone)
+        {
+            <li class="list-group-item list-group-item-action">
+                <label class="mx-2">
+                    <span class="badge bg-success"> - Done</span>
+                    @Model.Tasks[i].Name
+                </label>
+            </li>
+        }
+    }
+</ul>
+<a class="btn btn-warning mt-3" href="@Url.Action("DeleteTasks", "Home")">Delete done tasks</a>

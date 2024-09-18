@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\KTU\\2 Kursas\\4 pusmetis\\LAB2DATABASE\\projects\\LAB2SQL\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{7473BF13-0676-4912-92D9-1A5525F5FD16}|LAB2SQL\\LAB2SQL.csproj|c:\\users\\admin\\desktop\\ktu\\2 kursas\\4 pusmetis\\lab2database\\projects\\lab2sql\\lab2sql\\pages\\cargo\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7473BF13-0676-4912-92D9-1A5525F5FD16}|LAB2SQL\\LAB2SQL.csproj|solutionrelative:lab2sql\\pages\\cargo\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7473BF13-0676-4912-92D9-1A5525F5FD16}|LAB2SQL\\LAB2SQL.csproj|c:\\users\\admin\\desktop\\ktu\\2 kursas\\4 pusmetis\\lab2database\\projects\\lab2sql\\lab2sql\\pages\\clients\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7473BF13-0676-4912-92D9-1A5525F5FD16}|LAB2SQL\\LAB2SQL.csproj|solutionrelative:lab2sql\\pages\\clients\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7473BF13-0676-4912-92D9-1A5525F5FD16}|LAB2SQL\\LAB2SQL.csproj|c:\\users\\admin\\desktop\\ktu\\2 kursas\\4 pusmetis\\lab2database\\projects\\lab2sql\\lab2sql\\pages\\companiessummary\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7473BF13-0676-4912-92D9-1A5525F5FD16}|LAB2SQL\\LAB2SQL.csproj|solutionrelative:lab2sql\\pages\\companiessummary\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,20 +19,16 @@
       "RelativeMoniker": "D:0:0:{7473BF13-0676-4912-92D9-1A5525F5FD16}|LAB2SQL\\LAB2SQL.csproj|solutionrelative:lab2sql\\pages\\companiessummary\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{7473BF13-0676-4912-92D9-1A5525F5FD16}|LAB2SQL\\LAB2SQL.csproj|c:\\users\\admin\\desktop\\ktu\\2 kursas\\4 pusmetis\\lab2database\\projects\\lab2sql\\lab2sql\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7473BF13-0676-4912-92D9-1A5525F5FD16}|LAB2SQL\\LAB2SQL.csproj|solutionrelative:lab2sql\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7473BF13-0676-4912-92D9-1A5525F5FD16}|LAB2SQL\\LAB2SQL.csproj|c:\\users\\admin\\desktop\\ktu\\2 kursas\\4 pusmetis\\lab2database\\projects\\lab2sql\\lab2sql\\pages\\cargo\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7473BF13-0676-4912-92D9-1A5525F5FD16}|LAB2SQL\\LAB2SQL.csproj|solutionrelative:lab2sql\\pages\\cargo\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7473BF13-0676-4912-92D9-1A5525F5FD16}|LAB2SQL\\LAB2SQL.csproj|c:\\users\\admin\\desktop\\ktu\\2 kursas\\4 pusmetis\\lab2database\\projects\\lab2sql\\lab2sql\\pages\\cargo\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7473BF13-0676-4912-92D9-1A5525F5FD16}|LAB2SQL\\LAB2SQL.csproj|solutionrelative:lab2sql\\pages\\cargo\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7473BF13-0676-4912-92D9-1A5525F5FD16}|LAB2SQL\\LAB2SQL.csproj|c:\\users\\admin\\desktop\\ktu\\2 kursas\\4 pusmetis\\lab2database\\projects\\lab2sql\\lab2sql\\pages\\employees\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{7473BF13-0676-4912-92D9-1A5525F5FD16}|LAB2SQL\\LAB2SQL.csproj|solutionrelative:lab2sql\\pages\\employees\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7473BF13-0676-4912-92D9-1A5525F5FD16}|LAB2SQL\\LAB2SQL.csproj|c:\\users\\admin\\desktop\\ktu\\2 kursas\\4 pusmetis\\lab2database\\projects\\lab2sql\\lab2sql\\pages\\clients\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7473BF13-0676-4912-92D9-1A5525F5FD16}|LAB2SQL\\LAB2SQL.csproj|solutionrelative:lab2sql\\pages\\clients\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7473BF13-0676-4912-92D9-1A5525F5FD16}|LAB2SQL\\LAB2SQL.csproj|c:\\users\\admin\\desktop\\ktu\\2 kursas\\4 pusmetis\\lab2database\\projects\\lab2sql\\lab2sql\\pages\\employees\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -66,7 +70,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 216,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -74,19 +78,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Delete.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\KTU\\2 Kursas\\4 pusmetis\\LAB2DATABASE\\projects\\LAB2SQL\\LAB2SQL\\Pages\\Cargo\\Delete.cshtml.cs",
-              "RelativeDocumentMoniker": "LAB2SQL\\Pages\\Cargo\\Delete.cshtml.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\KTU\\2 Kursas\\4 pusmetis\\LAB2DATABASE\\projects\\LAB2SQL\\LAB2SQL\\Pages\\Cargo\\Delete.cshtml.cs",
-              "RelativeToolTip": "LAB2SQL\\Pages\\Cargo\\Delete.cshtml.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAA7wCAAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T09:31:54.93Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Index.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\KTU\\2 Kursas\\4 pusmetis\\LAB2DATABASE\\projects\\LAB2SQL\\LAB2SQL\\Pages\\Cargo\\Index.cshtml.cs",
               "RelativeDocumentMoniker": "LAB2SQL\\Pages\\Cargo\\Index.cshtml.cs",
@@ -98,7 +90,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Edit.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\KTU\\2 Kursas\\4 pusmetis\\LAB2DATABASE\\projects\\LAB2SQL\\LAB2SQL\\Pages\\Employees\\Edit.cshtml.cs",
               "RelativeDocumentMoniker": "LAB2SQL\\Pages\\Employees\\Edit.cshtml.cs",
@@ -110,7 +102,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Index.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\KTU\\2 Kursas\\4 pusmetis\\LAB2DATABASE\\projects\\LAB2SQL\\LAB2SQL\\Pages\\Employees\\Index.cshtml.cs",
               "RelativeDocumentMoniker": "LAB2SQL\\Pages\\Employees\\Index.cshtml.cs",
@@ -122,7 +114,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\KTU\\2 Kursas\\4 pusmetis\\LAB2DATABASE\\projects\\LAB2SQL\\LAB2SQL\\Pages\\Employees\\Create.cshtml",
               "RelativeDocumentMoniker": "LAB2SQL\\Pages\\Employees\\Create.cshtml",
@@ -134,7 +126,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\KTU\\2 Kursas\\4 pusmetis\\LAB2DATABASE\\projects\\LAB2SQL\\LAB2SQL\\Pages\\Employees\\Index.cshtml",
               "RelativeDocumentMoniker": "LAB2SQL\\Pages\\Employees\\Index.cshtml",
@@ -146,57 +138,82 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\KTU\\2 Kursas\\4 pusmetis\\LAB2DATABASE\\projects\\LAB2SQL\\LAB2SQL\\Pages\\Cargo\\Index.cshtml",
               "RelativeDocumentMoniker": "LAB2SQL\\Pages\\Cargo\\Index.cshtml",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\KTU\\2 Kursas\\4 pusmetis\\LAB2DATABASE\\projects\\LAB2SQL\\LAB2SQL\\Pages\\Cargo\\Index.cshtml",
               "RelativeToolTip": "LAB2SQL\\Pages\\Cargo\\Index.cshtml",
-              "ViewState": "AQIAAHUAAAAAAAAAAAAAAGQAAABsAAAA",
+              "ViewState": "AQIAAF4AAAAAAAAAAAAAADcAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-16T07:12:28.753Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\KTU\\2 Kursas\\4 pusmetis\\LAB2DATABASE\\projects\\LAB2SQL\\LAB2SQL\\Pages\\Clients\\Index.cshtml",
-              "RelativeDocumentMoniker": "LAB2SQL\\Pages\\Clients\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\KTU\\2 Kursas\\4 pusmetis\\LAB2DATABASE\\projects\\LAB2SQL\\LAB2SQL\\Pages\\Clients\\Index.cshtml",
-              "RelativeToolTip": "LAB2SQL\\Pages\\Clients\\Index.cshtml",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAABoAAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-16T07:04:03.52Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\KTU\\2 Kursas\\4 pusmetis\\LAB2DATABASE\\projects\\LAB2SQL\\LAB2SQL\\Pages\\CompaniesSummary\\Index.cshtml.cs",
-              "RelativeDocumentMoniker": "LAB2SQL\\Pages\\CompaniesSummary\\Index.cshtml.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\KTU\\2 Kursas\\4 pusmetis\\LAB2DATABASE\\projects\\LAB2SQL\\LAB2SQL\\Pages\\CompaniesSummary\\Index.cshtml.cs",
-              "RelativeToolTip": "LAB2SQL\\Pages\\CompaniesSummary\\Index.cshtml.cs",
-              "ViewState": "AQIAAG4AAAAAAAAAAAAAAH4AAAA6AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T07:03:37.409Z",
+              "WhenOpened": "2024-05-16T07:12:28.753Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\KTU\\2 Kursas\\4 pusmetis\\LAB2DATABASE\\projects\\LAB2SQL\\LAB2SQL\\Pages\\CompaniesSummary\\Index.cshtml",
-              "RelativeDocumentMoniker": "LAB2SQL\\Pages\\CompaniesSummary\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\KTU\\2 Kursas\\4 pusmetis\\LAB2DATABASE\\projects\\LAB2SQL\\LAB2SQL\\Pages\\CompaniesSummary\\Index.cshtml",
-              "RelativeToolTip": "LAB2SQL\\Pages\\CompaniesSummary\\Index.cshtml",
-              "ViewState": "AQIAAEMAAAAAAAAAAAAQwIkAAAAAAAAA",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\KTU\\2 Kursas\\4 pusmetis\\LAB2DATABASE\\projects\\LAB2SQL\\LAB2SQL\\Pages\\Clients\\Index.cshtml",
+              "RelativeDocumentMoniker": "LAB2SQL\\Pages\\Clients\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\KTU\\2 Kursas\\4 pusmetis\\LAB2DATABASE\\projects\\LAB2SQL\\LAB2SQL\\Pages\\Clients\\Index.cshtml",
+              "RelativeToolTip": "LAB2SQL\\Pages\\Clients\\Index.cshtml",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAABoAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-16T07:00:59.662Z",
+              "WhenOpened": "2024-05-16T07:04:03.52Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\KTU\\2 Kursas\\4 pusmetis\\LAB2DATABASE\\projects\\LAB2SQL\\LAB2SQL\\Pages\\CompaniesSummary\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "LAB2SQL\\Pages\\CompaniesSummary\\Index.cshtml.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\KTU\\2 Kursas\\4 pusmetis\\LAB2DATABASE\\projects\\LAB2SQL\\LAB2SQL\\Pages\\CompaniesSummary\\Index.cshtml.cs",
+              "RelativeToolTip": "LAB2SQL\\Pages\\CompaniesSummary\\Index.cshtml.cs",
+              "ViewState": "AQIAAIwAAAAAAAAAAAAuwCYAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T07:03:37.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Delete.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\KTU\\2 Kursas\\4 pusmetis\\LAB2DATABASE\\projects\\LAB2SQL\\LAB2SQL\\Pages\\Cargo\\Delete.cshtml.cs",
+              "RelativeDocumentMoniker": "LAB2SQL\\Pages\\Cargo\\Delete.cshtml.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\KTU\\2 Kursas\\4 pusmetis\\LAB2DATABASE\\projects\\LAB2SQL\\LAB2SQL\\Pages\\Cargo\\Delete.cshtml.cs",
+              "RelativeToolTip": "LAB2SQL\\Pages\\Cargo\\Delete.cshtml.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAA7wCAAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T09:31:54.93Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\KTU\\2 Kursas\\4 pusmetis\\LAB2DATABASE\\projects\\LAB2SQL\\LAB2SQL\\Pages\\CompaniesSummary\\Index.cshtml",
+              "RelativeDocumentMoniker": "LAB2SQL\\Pages\\CompaniesSummary\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\KTU\\2 Kursas\\4 pusmetis\\LAB2DATABASE\\projects\\LAB2SQL\\LAB2SQL\\Pages\\CompaniesSummary\\Index.cshtml",
+              "RelativeToolTip": "LAB2SQL\\Pages\\CompaniesSummary\\Index.cshtml",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAIkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-16T07:00:59.662Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\KTU\\2 Kursas\\4 pusmetis\\LAB2DATABASE\\projects\\LAB2SQL\\LAB2SQL\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "LAB2SQL\\Pages\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\KTU\\2 Kursas\\4 pusmetis\\LAB2DATABASE\\projects\\LAB2SQL\\LAB2SQL\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "LAB2SQL\\Pages\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAACUAAAAAAAAAAAAqwDYAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-19T19:03:31.283Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\KTU\\2 Kursas\\4 pusmetis\\LAB2DATABASE\\projects\\LAB2SQL\\LAB2SQL\\Pages\\Employees\\Edit.cshtml",
               "RelativeDocumentMoniker": "LAB2SQL\\Pages\\Employees\\Edit.cshtml",
@@ -208,7 +225,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Create.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\KTU\\2 Kursas\\4 pusmetis\\LAB2DATABASE\\projects\\LAB2SQL\\LAB2SQL\\Pages\\Employees\\Create.cshtml.cs",
               "RelativeDocumentMoniker": "LAB2SQL\\Pages\\Employees\\Create.cshtml.cs",
@@ -220,7 +237,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "_ValidationScriptsPartial.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\KTU\\2 Kursas\\4 pusmetis\\LAB2DATABASE\\projects\\LAB2SQL\\LAB2SQL\\Pages\\Shared\\_ValidationScriptsPartial.cshtml",
               "RelativeDocumentMoniker": "LAB2SQL\\Pages\\Shared\\_ValidationScriptsPartial.cshtml",
@@ -232,7 +249,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\KTU\\2 Kursas\\4 pusmetis\\LAB2DATABASE\\projects\\LAB2SQL\\LAB2SQL\\Pages\\Index.cshtml",
               "RelativeDocumentMoniker": "LAB2SQL\\Pages\\Index.cshtml",
